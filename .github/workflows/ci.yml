@@ -34,16 +34,15 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.17
-    
+  
+    - name: Check out code into go module directory
+      uses: actions/checkout@v2
+      
     - name: Install Migrate
       run: |
         curl -L https://github.com/golang-migrate/migrate/releases/download/v4.15.0/migrate.linux-amd64.tar.gz | tar xvz
         sudo mv migrate.linux-amd64 /usr/bin/
         which migrate
-
-    
-    - name: Check out code into go module directory
-      uses: actions/checkout@v2
 
     - name: migrate the db
       run: make migrateup
