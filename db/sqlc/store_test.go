@@ -142,6 +142,7 @@ func TestTransferTxDeadlock(t *testing.T) {
 				Amount:        amount,
 			})
 
+			
 			errs <- err
 		}()
 	}
