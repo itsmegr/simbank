@@ -1,0 +1,16 @@
+### Create Account
+POST http://127.0.0.1:8080/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "owner" : "",
+    "currency" : "USD"
+}
+
+### Get account by ID
+GET http://127.0.0.1:8080/get/1 HTTP/1.1
+
+
+### Get list of Accounts
+GET http://127.0.0.1:8080/get?pageId=0&pageSize=6 HTTP/1.1
+
